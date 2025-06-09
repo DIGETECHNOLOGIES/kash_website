@@ -4,276 +4,402 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to KASH</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="loader.css">
-    <!-- ==========ICONSCOUT CDn======================= -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <style>
+        .loader-container {
+            background-color: #047857; /* Emerald-800 */
+        }
+        .progress-bar {
+            background-color: #d1fae5; /* Emerald-100 */
+        }
+        .progress-bar-fill {
+            background-color: #10b981; /* Emerald-500 */
+        }
+        .customer_welcome {
+            background: linear-gradient(rgba(5, 150, 105, 0.8), rgba(5, 150, 105, 0.9)), url('images/store1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .navIcon:hover, .faqsIcon:hover {
+            color: #10b981; /* Emerald-500 */
+        }
+        .choose_carts div:first-child {
+            background-color: #10b981; /* Emerald-500 */
+        }
+        button, .about_app button {
+            background-color: #10b981; /* Emerald-500 */
+        }
+        button:hover, .about_app button:hover {
+            background-color: #059669; /* Emerald-600 */
+        }
+        .questions_and_answers:hover {
+            border-color: #10b981; /* Emerald-500 */
+        }
+        .footer {
+            background-color: #064e3b; /* Emerald-900 */
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans antialiased">
 
-    <!-- =================loader===================== -->
-    <div class="loader-container">
-        <h1 data-text="Welcome To Hello! World . . ." class="loader-heading">Welcome To KASH</h1>
-        <div class="progress-bar">
-            <div class="progress-bar-fill"></div>
+    <!-- Loader -->
+    <div class="loader-container fixed inset-0 flex flex-col items-center justify-center z-50 transition-opacity duration-500">
+        <h1 class="loader-heading text-4xl md:text-5xl font-bold text-white mb-8" data-text="Welcome To Hello! World . . .">Welcome To KASH</h1>
+        <div class="progress-bar w-64 h-2 rounded-full overflow-hidden">
+            <div class="progress-bar-fill h-full rounded-full transition-all duration-300"></div>
         </div>
     </div>
 
-    <div class="main-content" style="display: none;">
-        
-  
-    <!-- ============NAvbar=============== -->
-
-        <nav>
-            <div class="container nav_container">
-                <div class="nav_items">
-                    <div class="logo">KASH</div>
-                    <ul class="item_list" id="navMenu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#faqss">FAQs</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                    <button><a href="">Download App</a></button>
-                    <div class="navIcon"><i class="uil uil-bars"></i></div>
+    <div class="main-content hidden">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-md sticky top-0 z-40">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="text-2xl font-bold text-emerald-800">KASH</div>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <ul class="flex space-x-6">
+                            <li><a href="index.html" class="text-gray-700 hover:text-emerald-600 transition">Home</a></li>
+                            <li><a href="#about" class="text-gray-700 hover:text-emerald-600 transition">About</a></li>
+                            <li><a href="#faqss" class="text-gray-700 hover:text-emerald-600 transition">FAQs</a></li>
+                            <li><a href="#contact" class="text-gray-700 hover:text-emerald-600 transition">Contact</a></li>
+                        </ul>
+                        <button class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition transform hover:scale-105">
+                            <a href="">Download App</a>
+                        </button>
+                    </div>
+                    
+                    <div class="md:hidden navIcon text-2xl cursor-pointer">
+                        <i class="uil uil-bars"></i>
+                    </div>
                 </div>
-
+                
+                <!-- Mobile Menu -->
+                <div class="md:hidden hidden mt-4" id="navMenu">
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="block py-2 text-gray-700 hover:text-emerald-600">Home</a></li>
+                        <li><a href="#about" class="block py-2 text-gray-700 hover:text-emerald-600">About</a></li>
+                        <li><a href="#faqss" class="block py-2 text-gray-700 hover:text-emerald-600">FAQs</a></li>
+                        <li><a href="#contact" class="block py-2 text-gray-700 hover:text-emerald-600">Contact</a></li>
+                    </ul>
+                    <button class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition">
+                        <a href="">Download App</a>
+                    </button>
+                </div>
             </div>
         </nav>
 
-        <!-- ==============welcoming the costumers=============== -->
-        <div class="customer_welcome aspect-video">
-            <h1>Find Reliable Customers Anytime, Anywhere</h1>
-            <h3>Buy from trusted suppliers, get fast delivery at your doorstep with just one click</h3>
+        <!-- Hero Section -->
+        <div class="customer_welcome w-full h-96 md:h-screen flex flex-col justify-center items-center text-center text-white px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Find Reliable Customers Anytime, Anywhere</h1>
+            <h3 class="text-xl md:text-2xl max-w-2xl">Buy from trusted suppliers, get fast delivery at your doorstep with just one click</h3>
         </div>
-        <main >
 
-            <!-- ===========why trust Kash============== -->
-            <div style="text-align: center; font-size: 25px; color: gray;">WHY TRUST KASH</div>
-            <div class="why_trust_kash">
-                <div class="cart">
-                    <div class="cart_logo"><i class="uil uil-award"></i></div>
+        <main class="container mx-auto px-4 py-12">
+            <!-- Trust Section -->
+            <div class="text-center text-gray-500 text-2xl mb-12">WHY TRUST KASH</div>
+            <div class="why_trust_kash grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <div class="cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-award"></i></div>
                     <div class="cart_message">
-                        <h2>Fast Delivery</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit qui ipsa quaerat perspiciatis deserunt.</p>
+                        <h2 class="text-xl font-semibold mb-2">Fast Delivery</h2>
+                        <p class="text-gray-600">Get your products delivered quickly with our efficient logistics network.</p>
                     </div>
                 </div>
 
-                <div class="cart">
-                    <div class="cart_logo"><i class="uil uil-check-circle"></i></div>
+                <div class="cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-check-circle"></i></div>
                     <div class="cart_message">
-                        <h2>Verified Experts</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit qui ipsa quaerat perspiciatis deserunt.</p>
+                        <h2 class="text-xl font-semibold mb-2">Verified Experts</h2>
+                        <p class="text-gray-600">All our suppliers undergo strict verification for quality assurance.</p>
                     </div>
                 </div>
 
-                <div class="cart">
-                    <div class="cart_logo"><i class="uil uil-parcel"></i></div>
+                <div class="cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-parcel"></i></div>
                     <div class="cart_message">
-                        <h2>Your Peace of Mind</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit qui ipsa quaerat perspiciatis deserunt.</p>
+                        <h2 class="text-xl font-semibold mb-2">Your Peace of Mind</h2>
+                        <p class="text-gray-600">Shop with confidence knowing your transactions are secure.</p>
                     </div>
                 </div>
 
-                <div class="cart">
-                    <div class="cart_logo"><i class="uil uil-check-circle"></i></div>
+                <div class="cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-check-circle"></i></div>
                     <div class="cart_message">
-                        <h2>Secured payments</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugit qui ipsa quaerat perspiciatis deserunt.</p>
+                        <h2 class="text-xl font-semibold mb-2">Secured payments</h2>
+                        <p class="text-gray-600">Multiple payment options with bank-level security encryption.</p>
                     </div>
                 </div>
             </div>
 
-
-            <!-- ===========about page==================== -->
-            <h1>ABOUT KASH</h1>
-            <div class="about_page" id="about">
-                <div class="about_logo">
-                    <img src="images/store1.jpg" alt="">
+            <!-- About Section -->
+            <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">ABOUT KASH</h1>
+            <div class="about_page flex flex-col lg:flex-row gap-8 mb-20" id="about">
+                <div class="about_logo lg:w-1/2">
+                    <img src="images/store1.jpg" alt="KASH Store" class="w-full h-auto rounded-xl shadow-lg">
                 </div>
-                <div class="about_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iure temporibus praesentium? Voluptatum nesciunt et suscipit aperiam nostrum labore repellat possimus! Tempora neque dignissimos mollitia fugit voluptate cupiditate harum id minima perferendis doloribus distinctio, rerum a animi temporibus velit aspernatur! Explicabo earum ex, obcaecati corrupti iure tempore sunt quis suscipit mollitia ratione excepturi error voluptatibus eaque deleniti aliquam eius tenetur. Nostrum repudiandae quidem quo nemo. Quae, dicta maiores repudiandae sit, molestias debitis deserunt, maxime natus veniam sequi quo unde. Praesentium, consectetur voluptatibus? Accusamus quia illum quaerat ut dignissimos modi facere laboriosam saepe delectus, officiis eum consequatur ullam, autem perspiciatis expedita.</p>
-
-                </div>
-
-                <div class="about_app">
-                    <p>KASH is your way forward for easy shopping</p>
-                    <button><a href="">Download Now</a></button>
-                </div>
-            </div>
-
-            <!-- ====why choose kash====== -->
-            <h1>WHY CHOOSE KASH</h1>
-            <div class="why_choose_kash">
-                <div class="choose_image"><img src="/images/store1.jpg" alt=""></div>
-
-
-                <!-- carts -->
-                <div class="why_choose_kash_carts">
-
-                    <div class="choose_carts">
-                        <div><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3>FAST SUPPLIES</h3>
-                            
-                            <p>With KASH, you are sure to receive your product on time and everything intack.</p>
-                        </div>
-                        
-                    </div>
-
-                    <div class="choose_carts">
-                        <div><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3>VERIFIED SERVICE PROVIDERS</h3>
-                            <p>All providers undergo a screening process to ensure reliability and trustworthiness.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="choose_carts">
-                        <div><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3>CONVENIENCE AND SPEED</h3>
-                            <p>Easily find and buy from your favourite shop.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="choose_carts">
-                        <div><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3>SECURE PAYMENTS</h3>
-                            <p>Multiple payment options with secure transactions</p>
-                        </div>
-
-                    </div>
-
-                    <div class="choose_carts">
-                        <div><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3>CUSTOMER SUPPORT</h3>
-                            <p>Dedicated support team to assist with the neccessary worries that come from feedback.</p>
-                        </div>
-
-                    </div>
+                <div class="about_text lg:w-1/2">
+                    <p class="text-gray-700 leading-relaxed">
+                        KASH is revolutionizing the way people shop by connecting customers with trusted suppliers in their area. 
+                        Our platform ensures fast delivery, quality products, and exceptional customer service. 
+                        With a focus on reliability and convenience, we've built a network of verified suppliers who meet our strict standards.
+                        <br><br>
+                        Whether you're looking for everyday essentials or specialty items, KASH makes shopping effortless. 
+                        Our user-friendly app and website provide a seamless experience from browsing to checkout. 
+                        We're committed to supporting local businesses while providing customers with the best shopping experience possible.
+                    </p>
                 </div>
             </div>
 
-            <!-- =========faqs========== -->
-            <div class="faqs" id="faqss">
-                    <h1>Frequently Asked Qustions</h1>
-                    <div class="questions_and_answers">
-                        <span class="faqsIcon"></span>
-                        <div class="questions">
-                            <h5>Questions1 Lorem ipsum dolor sit.</h5>
-                            <p class="faqs_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate vitae corrupti beatae provident hic!</p>
-                        </div>
-                    </div> 
+            <div class="about_app bg-emerald-50 p-8 rounded-xl text-center mb-20">
+                <p class="text-xl font-medium text-gray-800 mb-6">KASH is your way forward for easy shopping</p>
+                <button class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg text-lg font-medium transition transform hover:scale-105">
+                    <a href="">Download Now</a>
+                </button>
+            </div>
 
-                    <div class="questions_and_answers">
-                        <span class="faqsIcon"></span>
-                        <div class="questions">
-                            <h5>Questions2 Lorem ipsum dolor sit.</h5>
-                            <p class="faqs_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate vitae corrupti beatae provident hic!</p>
-                        </div>
-                    </div> 
+            <!-- Why Choose Section -->
+            <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">WHY CHOOSE KASH</h1>
+            <div class="why_choose_kash flex flex-col lg:flex-row gap-8 mb-20">
+                <div class="choose_image lg:w-1/2">
+                    <img src="/images/store1.jpg" alt="Why Choose KASH" class="w-full h-auto rounded-xl shadow-lg">
+                </div>
 
-                    <div class="questions_and_answers">
-                        <span class="faqsIcon"></span>
-                        <div class="questions">
-                            <h5>Questions3 Lorem ipsum dolor sit.</h5>
-                            <p class="faqs_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate vitae corrupti beatae provident hic!</p>
+                <div class="why_choose_kash_carts lg:w-1/2 space-y-4">
+                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-lg">FAST SUPPLIES</h3>
+                            <p class="text-gray-600">With KASH, you are sure to receive your product on time and everything intact.</p>
                         </div>
-                    </div> 
+                    </div>
 
-                    <div class="questions_and_answers">
-                        <span class="faqsIcon"></span>
-                        <div class="questions">
-                            <h5>Questions Lorem ipsum dolor sit.</h5>
-                            <p class="faqs_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate vitae corrupti beatae provident hic!</p>
+                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-lg">VERIFIED SERVICE PROVIDERS</h3>
+                            <p class="text-gray-600">All providers undergo a screening process to ensure reliability and trustworthiness.</p>
                         </div>
-                    </div> 
+                    </div>
 
-                    <div class="questions_and_answers">
-                        <span class="faqsIcon"></span>
-                        <div class="questions">
-                            <h5>Questions Lorem ipsum dolor sit.</h5>
-                            <p class="faqs_answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate vitae corrupti beatae provident hic!</p>
+                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-lg">CONVENIENCE AND SPEED</h3>
+                            <p class="text-gray-600">Easily find and buy from your favorite shop with just a few taps.</p>
                         </div>
-                    </div> 
+                    </div>
+
+                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-lg">SECURE PAYMENTS</h3>
+                            <p class="text-gray-600">Multiple payment options with secure transactions protected by encryption.</p>
+                        </div>
+                    </div>
+
+                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-lg">CUSTOMER SUPPORT</h3>
+                            <p class="text-gray-600">Dedicated support team available 24/7 to assist with any questions or concerns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQs Section -->
+            <div class="faqs mb-20" id="faqss">
+                <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h1>
+                
+                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h5 class="font-medium text-lg">How do I place an order on KASH?</h5>
+                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
+                    </div>
+                    <p class="faqs_answer mt-2 text-gray-600 hidden">Simply download our app, browse products, add to cart, and checkout with your preferred payment method. It's that easy!</p>
+                </div>
+
+                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h5 class="font-medium text-lg">What payment methods do you accept?</h5>
+                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
+                    </div>
+                    <p class="faqs_answer mt-2 text-gray-600 hidden">We accept mobile money, credit/debit cards, and bank transfers. All payments are securely processed.</p>
+                </div>
+
+                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h5 class="font-medium text-lg">How long does delivery take?</h5>
+                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
+                    </div>
+                    <p class="faqs_answer mt-2 text-gray-600 hidden">Delivery times vary by location but typically range from 1-3 business days within urban areas.</p>
+                </div>
+
+                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h5 class="font-medium text-lg">Can I return a product if I'm not satisfied?</h5>
+                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
+                    </div>
+                    <p class="faqs_answer mt-2 text-gray-600 hidden">Yes, we have a 7-day return policy for most products. Contact our support team to initiate a return.</p>
+                </div>
+
+                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h5 class="font-medium text-lg">How do I become a supplier on KASH?</h5>
+                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
+                    </div>
+                    <p class="faqs_answer mt-2 text-gray-600 hidden">Visit our supplier portal on the website and complete the application form. Our team will review your application.</p>
+                </div>
             </div>
         </main>
 
-        <!-- =========contact page================ -->
-        <div class="contact">
-            <div class="normal_details">
-                <h3>Contact Us</h3>
-                <p>Feel free to use the form or drop us and email. Old-fashioned phone calls work too.</p>
-                <div class="direct_calls">
-                    <i class="uil uil-calling"></i>
-                    <p>12345665432</p>
-                </div>
+        <!-- Contact Section -->
+        <div class="contact bg-gray-50 py-16 px-4" id="contact">
+            <div class="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="normal_details">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Us</h3>
+                    <p class="text-gray-600 mb-8">Feel free to use the form or drop us an email. Old-fashioned phone calls work too.</p>
+                    
+                    <div class="direct_calls flex items-center mb-4">
+                        <i class="uil uil-calling text-emerald-500 text-xl mr-3"></i>
+                        <p class="text-gray-700">+237 123 456 789</p>
+                    </div>
 
-                <div class="direct_calls">
-                    <i class="uil uil-envelope-alt"></i>
-                    <p>kash@gmail.com</p>
-                </div>
+                    <div class="direct_calls flex items-center mb-4">
+                        <i class="uil uil-envelope-alt text-emerald-500 text-xl mr-3"></i>
+                        <p class="text-gray-700">support@kash.com</p>
+                    </div>
 
-                <div class="direct_calls">
-                    <i class="uil uil-map"></i>
-                    <p>Bambili,Bamenda, Cameroon</p>
-                </div>
-            </div>
-
-
-            <form action="">
-                <div class="form_details">
-                    <label for="">Name</label>
-                    <div class="form">
-                        <input type="text" name="" id="" placeholder="First Name">
-                        <input type="text" name="" id="" placeholder="Last Name">
+                    <div class="direct_calls flex items-center">
+                        <i class="uil uil-map text-emerald-500 text-xl mr-3"></i>
+                        <p class="text-gray-700">Bambili, Bamenda, Cameroon</p>
                     </div>
                 </div>
 
-                <div class="form_details">
-                    <label for="">Email</label>
-                    <input type="email" name="" id="" placeholder="Enter Email">
-                </div>
+                <form action="" class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="form_details mb-4">
+                        <label for="" class="block text-gray-700 mb-2">Name</label>
+                        <div class="form grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="First Name">
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Last Name">
+                        </div>
+                    </div>
 
-                <div class="form_details">
-                    <label for="">Phone(optional)</label>
-                    <input type="number" name="" id="" placeholder="Enter Number">
-                </div>
+                    <div class="form_details mb-4">
+                        <label for="" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Enter Email">
+                    </div>
 
-                <div class="form_details">
-                    <label for="">Message</label>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Send Message"></textarea>
-                </div>
-            </form>
+                    <div class="form_details mb-4">
+                        <label for="" class="block text-gray-700 mb-2">Phone (optional)</label>
+                        <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Enter Number">
+                    </div>
+
+                    <div class="form_details mb-6">
+                        <label for="" class="block text-gray-700 mb-2">Message</label>
+                        <textarea name="" id="" cols="30" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Your Message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-lg font-medium transition">Send Message</button>
+                </form>
+            </div>
         </div>
 
-        <!-- ======footer======= -->
-        <footer>
-            <div class="footer">
-                <div class="footer_logo">
-                    <h1>KASH</h1>
-                </div>
+        <!-- Footer -->
+        <footer class="bg-emerald-900 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="footer flex flex-col md:flex-row justify-between items-center mb-6">
+                    <div class="footer_logo mb-4 md:mb-0">
+                        <h1 class="text-2xl font-bold">KASH</h1>
+                    </div>
 
-                <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Terms & Policies</a></li>
-                    <li><a href="">Contact</a></li>
-                    
-                </ul>
+                    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">
+                        <li><a href="#about" class="hover:text-emerald-300 transition">About</a></li>
+                        <li><a href="#" class="hover:text-emerald-300 transition">Terms & Policies</a></li>
+                        <li><a href="#contact" class="hover:text-emerald-300 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <p class="text-center text-emerald-200">All Rights Reserved &copy; KASH 2025</p>
             </div>
-            <p>All Rights Reserve &copy;KASH 2025</p>
         </footer>
     </div>
 
+    <script>
+        // Loader
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader-container');
+            const mainContent = document.querySelector('.main-content');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const progressBar = document.querySelector('.progress-bar-fill');
+            const interval = setInterval(() => {
+                progress += 5;
+                progressBar.style.width = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    loader.style.opacity = '0';
+                    loader.style.pointerEvents = 'none';
+                    
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                        mainContent.style.display = 'block';
+                    }, 500);
+                }
+            }, 100);
+        });
 
-<script src="/scripts/loder.js"></script>
-<script src="/scripts/image_slider.js"></script>
-<script src="/scripts/navbar.js"></script>
-<script src="/scripts/faqs.js"></script>
+        // Mobile Menu Toggle
+        document.querySelector('.navIcon').addEventListener('click', function() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.questions_and_answers').forEach(item => {
+            item.addEventListener('click', function() {
+                const answer = this.querySelector('.faqs_answer');
+                const icon = this.querySelector('.faqsIcon i');
+                
+                answer.classList.toggle('hidden');
+                
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('uil-minus');
+                    icon.classList.add('uil-plus');
+                } else {
+                    icon.classList.remove('uil-plus');
+                    icon.classList.add('uil-minus');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('navMenu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
