@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Favicon-->
+    <link rel="icon" href="./images/icon.png" type="image/png">
     <style>
         .loader-container {
             background-color: #047857; /* Emerald-800 */
@@ -72,7 +74,7 @@
             <div class="container mx-auto px-4 py-3">
                 <div class="flex justify-between items-center">
                     <div class="text-2xl font-bold text-emerald-800 flex items-center">
-                        <i class="uil uil-shopping-cart-alt mr-2"></i> KASH
+                        <img src="./images/icon.png" class="w-14 h-14 p-0" alt="Kash"> KASH
                     </div>
                     
                     <div class="hidden md:flex items-center space-x-8">
@@ -84,7 +86,7 @@
                             <li><a href="#contact" class="text-gray-700 hover:text-emerald-600 transition font-medium">Contact</a></li>
                         </ul>
                         <button class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-                            <a href="" class="flex items-center">
+                            <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center">
                                 <i class="uil uil-download-alt mr-2"></i> Download App
                             </a>
                         </button>
@@ -678,7 +680,7 @@
                 </div>
                 
                 <div class="border-t border-emerald-700 mt-8 pt-8 text-center text-emerald-200">
-                    <p>&copy; 2025 KASH Shopping Platform. All rights reserved.</p>
+                    <p>&copy; <span id = "year"></span> KASH Shopping Platform. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -693,6 +695,8 @@
 
     <!-- JavaScript -->
     <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
         // Loader animation
         document.addEventListener('DOMContentLoaded', function() {
             const loaderContainer = document.querySelector('.loader-container');
