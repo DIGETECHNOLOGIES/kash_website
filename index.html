@@ -1,805 +1,1099 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CM">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to KASH - Your Reliable Shopping Platform</title>
-    <!-- Tailwind CSS CDN -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>KASH - Secure Online Shopping | Buy, Sell & Resell with 97% Refund Guarantee</title>
+    <meta name="description" content="KASH is Cameroon's trusted e-commerce platform. Buy, sell, and resell goods securely with 97% refund guarantee, lifetime referral bonuses, and fast delivery. Shop from verified suppliers from home.">
+    <meta name="author" content="KASH Shopping Platform">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.digetech.org/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.digetech.org/">
+    <meta property="og:title" content="KASH - Secure Online Shopping with 97% Refund Guarantee">
+    <meta property="og:description" content="Buy, sell & resell goods securely. Verified suppliers, fast delivery, 97% refund protection. Join thousands of satisfied customers shopping from home.">
+    <meta property="og:image" content="https://www.digetech.org/images/og-image.jpg">
+    <meta property="og:locale" content="en_CM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.digetech.org/">
+    <meta name="twitter:title" content="KASH - Secure Online Shopping with 97% Refund Guarantee">
+    <meta name="twitter:description" content="Buy, sell & resell goods securely. Verified suppliers, fast delivery, 97% refund protection.">
+    <meta name="twitter:image" content="https://www.digetech.org/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unicons.iconscout.com">
+    
+    <!-- Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- Favicon-->
-    <link rel="icon" href="./images/icon.png" type="image/png">
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "KASH Shopping Platform",
+      "description": "Secure e-commerce platform for buying, selling, and reselling goods in Cameroon",
+      "url": "https://www.digetech.org",
+      "logo": "https://www.digetech.org/images/icon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+237-676-411-380",
+        "contactType": "Customer Service",
+        "areaServed": "CM",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/KASHShopping",
+        "https://twitter.com/KASHSupport",
+        "https://www.instagram.com/KASHOfficial"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "CCAST Street, Bambili",
+        "addressLocality": "Bamenda",
+        "addressRegion": "Northwest",
+        "addressCountry": "CM"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the 97% refund guarantee work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your payment is held in secure escrow until you confirm delivery. You're eligible for a 97% refund if: (1) the item isn't delivered at all, (2) delivery time exceeds the promised timeframe, or (3) the product has been tampered with or doesn't match the description. Simply request a refund through the app within the specified timeframe, and we'll process it immediately after verification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I earn the 1% lifetime referral bonus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Share your unique referral code with friends and family. When they sign up and complete transactions (buying, selling, or reselling), you earn 1% commission on every transaction they make—forever. There's no cap on earnings, and you can track your referral income in real-time through your dashboard. The more people you refer, the more passive income you generate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes KASH suppliers 'verified'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every supplier on KASH goes through our comprehensive 5-step verification process: (1) Business registration and legal documentation review, (2) Physical store or warehouse inspection, (3) Product quality sampling and testing, (4) Background checks on business owners, and (5) Ongoing performance monitoring based on customer reviews and delivery metrics. Only businesses that meet our strict standards can sell on KASH."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I both buy and sell on KASH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! KASH supports all three roles: buyer, seller, and reseller. You can purchase products for personal use while also listing your own inventory for sale. Many users buy from wholesale suppliers at discounted rates and resell at their preferred markup. Your single account gives you access to all features, making it easy to manage different activities from one dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does delivery take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delivery times vary by location and supplier. Most urban areas receive orders within 24-72 hours. You'll see the estimated delivery time before checkout, and you can track your package in real-time through the app. If delivery exceeds the promised timeframe, you're eligible for our 97% refund guarantee. Express delivery options are available for urgent orders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods does KASH accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept multiple secure payment methods including mobile money (MTN, Orange Money), bank transfers, debit/credit cards (Visa, Mastercard), and our in-app KASH Wallet. All transactions are encrypted with bank-level security, and your payment information is never stored on our servers. Choose the method that works best for you at checkout."
+      }
+    }
+  ]
+}
+</script>
+
+
+    
     <style>
+        /* Critical CSS for above-the-fold content */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
         .loader-container {
-            background-color: #047857; /* Emerald-800 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #047857 0%, #059669 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
         }
+        
+        .loader-heading {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         .progress-bar {
-            background-color: #d1fae5; /* Emerald-100 */
+            width: 300px;
+            max-width: 80%;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
         }
+        
         .progress-bar-fill {
-            background-color: #10b981; /* Emerald-500 */
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            border-radius: 10px;
+            animation: progressAnimation 2.5s ease-out forwards;
         }
-        .customer_welcome {
-            background: linear-gradient(rgba(5, 150, 105, 0.8), rgba(5, 150, 105, 0.9)), url('images/store1.jpg');
+        
+        @keyframes progressAnimation {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(5, 150, 105, 0.85), rgba(5, 150, 105, 0.9)), url('images/store1.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
-        .navIcon:hover, .faqsIcon:hover {
-            color: #10b981; /* Emerald-500 */
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .choose_carts div:first-child {
-            background-color: #10b981; /* Emerald-500 */
-        }
-        button, .about_app button, .cta-button {
-            background-color: #10b981; /* Emerald-500 */
-        }
-        button:hover, .about_app button:hover, .cta-button:hover {
-            background-color: #059669; /* Emerald-600 */
-            transform: translateY(-2px);
-        }
-        .questions_and_answers:hover {
-            border-color: #10b981; /* Emerald-500 */
-        }
-        .footer {
-            background-color: #064e3b; /* Emerald-900 */
-        }
+        
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
-        .stats-item {
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             transition: all 0.3s ease;
         }
-        .stats-item:hover {
-            transform: scale(1.05);
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Accessibility improvements */
+        .skip-to-content {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+        }
+        
+        .skip-to-content:focus {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+            background: #10b981;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
-<body class="font-sans antialiased">
-
-    <!-- Loader -->
-    <div class="loader-container fixed inset-0 flex flex-col items-center justify-center z-50 transition-opacity duration-500">
-        <h1 class="loader-heading text-4xl md:text-5xl font-bold text-white mb-8 animate__animated animate__fadeIn" data-text="Welcome To KASH">Welcome To KASH</h1>
-        <div class="progress-bar w-64 h-2 rounded-full overflow-hidden">
-            <div class="progress-bar-fill h-full rounded-full transition-all duration-300"></div>
+<body class="antialiased">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Loading Screen -->
+    <div class="loader-container" id="loader" aria-label="Loading">
+        <h1 class="loader-heading">Welcome To KASH</h1>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar-fill"></div>
         </div>
     </div>
 
-    <div class="main-content hidden">
-        <!-- Navbar -->
-        <nav class="bg-white shadow-md sticky top-0 z-40 animate__animated animate__fadeInDown">
-            <div class="container mx-auto px-4 py-3">
-                <div class="flex justify-between items-center">
-                    <div class="text-2xl font-bold text-emerald-800 flex items-center">
-                        <img src="./images/icon.png" class="w-14 h-14 p-0" alt="Kash"> KASH
-                    </div>
-                    
-                    <div class="hidden md:flex items-center space-x-8">
-                        <ul class="flex space-x-6">
-                            <li><a href="index.html" class="text-gray-700 hover:text-emerald-600 transition font-medium">Home</a></li>
-                            <li><a href="#about" class="text-gray-700 hover:text-emerald-600 transition font-medium">About</a></li>
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Header Navigation -->
+        <header>
+            <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+                <div class="container mx-auto px-4 py-3">
+                    <div class="flex justify-between items-center">
+                        <!-- Logo -->
+                        <div class="flex items-center">
+                            <img src="./images/icon.png" class="w-12 h-12 mr-2" alt="KASH Logo" width="48" height="48">
+                            <span class="text-2xl font-bold text-emerald-800">KASH</span>
+                        </div>
+                        
+                        <!-- Desktop Navigation -->
+                        <ul class="hidden md:flex items-center space-x-6">
+                            <li><a href="#home" class="text-gray-700 hover:text-emerald-600 transition font-medium">Home</a></li>
                             <li><a href="#features" class="text-gray-700 hover:text-emerald-600 transition font-medium">Features</a></li>
-                            <li><a href="#faqss" class="text-gray-700 hover:text-emerald-600 transition font-medium">FAQs</a></li>
+                            <li><a href="#how-it-works" class="text-gray-700 hover:text-emerald-600 transition font-medium">How It Works</a></li>
+                            <li><a href="#about" class="text-gray-700 hover:text-emerald-600 transition font-medium">About</a></li>
+                            <li><a href="#faq" class="text-gray-700 hover:text-emerald-600 transition font-medium">FAQ</a></li>
                             <li><a href="#contact" class="text-gray-700 hover:text-emerald-600 transition font-medium">Contact</a></li>
                         </ul>
-                        <button class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-                            <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center">
+                        
+                        <div class="hidden md:block">
+                            <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" 
+                               class="btn-primary text-white px-6 py-2 rounded-lg inline-flex items-center shadow-lg"
+                               download
+                                rel="nofollow"
+                               aria-label="Download KASH mobile app">
                                 <i class="uil uil-download-alt mr-2"></i> Download App
                             </a>
+                        </div>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button class="md:hidden text-2xl text-emerald-600" 
+                                id="mobileMenuBtn" 
+                                aria-label="Toggle mobile menu"
+                                aria-expanded="false">
+                            <i class="uil uil-bars"></i>
                         </button>
                     </div>
                     
-                    <div class="md:hidden navIcon text-2xl cursor-pointer">
-                        <i class="uil uil-bars"></i>
-                    </div>
-                </div>
-                
-                <!-- Mobile Menu -->
-                <div class="md:hidden hidden mt-4 animate__animated animate__fadeIn" id="navMenu">
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">Home</a></li>
-                        <li><a href="#about" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">About</a></li>
-                        <li><a href="#features" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">Features</a></li>
-                        <li><a href="#faqss" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">FAQs</a></li>
-                        <li><a href="#contact" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">Contact</a></li>
-                    </ul>
-                    <button class="cta-button mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="" class="flex items-center justify-center">
+                    <!-- Mobile Menu -->
+                    <div class="md:hidden hidden mt-4" id="mobileMenu">
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">Home</a></li>
+                            <li><a href="#features" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">Features</a></li>
+                            <li><a href="#how-it-works" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">How It Works</a></li>
+                            <li><a href="#about" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">About</a></li>
+                            <li><a href="#faq" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">FAQ</a></li>
+                            <li><a href="#contact" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium">Contact</a></li>
+                        </ul>
+                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" 
+                           class="btn-primary mt-4 w-full text-center text-white px-4 py-2 rounded-lg inline-flex items-center justify-center shadow-lg"
+                           download
+                            rel="nofollow">
                             <i class="uil uil-download-alt mr-2"></i> Download App
                         </a>
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <div class="customer_welcome w-full h-96 md:h-screen flex flex-col justify-center items-center text-center text-white px-4 animate__animated animate__fadeIn">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInUp">Relaible Shops. Relaible Customers.<br> Anytime, Anywhere</h1>
-            <h3 class="text-xl md:text-2xl max-w-2xl mb-8 animate__animated animate__fadeInUp animate__delay-1s">Revolutionizing the way you shop with verified suppliers, fast delivery, and exceptional service</h3>
-            <div class="flex flex-col sm:flex-row gap-4 animate__animated animate__fadeInUp animate__delay-2s">
-                <button class="cta-button bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center">
-                        <i class="uil uil-play-circle mr-2"></i> Watch Demo
-                    </a>
-                </button>
-                <button class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center">
-                        <i class="uil uil-download-alt mr-2"></i> Get Started
-                    </a>
-                </button>
-            </div>
-        </div>
-
-        <!-- Stats Section -->
-        <div class="bg-emerald-50 py-12 animate__animated animate__fadeIn">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="stats-item bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold text-emerald-600 mb-2">30+</div>
-                        <div class="text-gray-600">Happy Customers</div>
-                    </div>
-                    <div class="stats-item bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold text-emerald-600 mb-2">10+</div>
-                        <div class="text-gray-600">Verified Suppliers</div>
-                    </div>
-                    <div class="stats-item bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold text-emerald-600 mb-2">98%</div>
-                        <div class="text-gray-600">Positive Reviews</div>
-                    </div>
-                    <div class="stats-item bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-4xl font-bold text-emerald-600 mb-2">24/7</div>
-                        <div class="text-gray-600">Customer Support</div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </nav>
+        </header>
 
-        <main class="container mx-auto px-4 py-12">
-            <!-- Trust Section -->
-            <div class="text-center text-gray-500 text-2xl mb-12 animate__animated animate__fadeIn">WHY TRUST KASH</div>
-            <div class="why_trust_kash grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-                <div class="feature-card cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-award"></i></div>
-                    <div class="cart_message">
-                        <h2 class="text-xl font-semibold mb-2">Fast Delivery</h2>
-                        <p class="text-gray-600">Our optimized logistics network ensures your products arrive when you need them, with same-day delivery available in many areas.</p>
-                    </div>
-                </div>
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section min-h-screen flex items-center justify-center text-white px-4 py-20">
+                <div class="container mx-auto text-center max-w-4xl">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Buy, Sell & Resell Goods Securely with 97% Refund Guarantee
+                    </h1>
+                    <img src="images/store1.jpg"
+                        alt="Secure online shopping platform in Cameroon"
+                        class="sr-only">
 
-                <div class="feature-card cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-check-circle"></i></div>
-                    <div class="cart_message">
-                        <h2 class="text-xl font-semibold mb-2">Verified Experts</h2>
-                        <p class="text-gray-600">Every supplier undergoes a rigorous 5-step verification process including background checks and quality assessments.</p>
-                    </div>
-                </div>
-
-                <div class="feature-card cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-parcel"></i></div>
-                    <div class="cart_message">
-                        <h2 class="text-xl font-semibold mb-2">Your Peace of Mind</h2>
-                        <p class="text-gray-600">Our satisfaction guarantee ensures you'll love your purchase or we'll make it right - no questions asked.</p>
-                    </div>
-                </div>
-
-                <div class="feature-card cart bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="cart_logo text-emerald-500 text-4xl mb-4"><i class="uil uil-shield-check"></i></div>
-                    <div class="cart_message">
-                        <h2 class="text-xl font-semibold mb-2">Secured payments</h2>
-                        <p class="text-gray-600">Bank-level 256-bit encryption protects all transactions, with multiple payment options for your convenience.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section 1 -->
-            <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl p-8 text-white text-center mb-20 animate__animated animate__fadeIn">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Experience Hassle-Free Shopping?</h2>
-                <p class="text-lg mb-6 max-w-2xl mx-auto">Join thousands of satisfied customers who trust KASH for their everyday needs and specialty items.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button class="cta-button bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center justify-center">
-                            <i class="uil uil-apple mr-2"></i> App Store
+                    <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                        Shop from verified suppliers, earn lifetime referral bonuses, and enjoy fast delivery—all from the comfort of your home
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" 
+                           class="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold inline-flex items-center shadow-xl transition transform hover:-translate-y-1"
+                           download>
+                            <i class="uil uil-download-alt mr-2 text-xl"></i> Download Free App
                         </a>
-                    </button>
-                    <button class="cta-button bg-emerald-800 hover:bg-emerald-900 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center justify-center">
-                            <i class="uil uil-google-play mr-2"></i> Play Store
+                        <a href="#how-it-works" 
+                           class="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center shadow-xl transition transform hover:-translate-y-1">
+                            <i class="uil uil-play-circle mr-2 text-xl"></i> See How It Works
                         </a>
-                    </button>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Features Section -->
-            <div id="features" class="mb-20 animate__animated animate__fadeIn">
-                <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">KASH FEATURES</h1>
-                
-                <div class="flex flex-col lg:flex-row gap-12 items-center mb-16">
-                    <div class="lg:w-1/2 animate__animated animate__fadeInLeft">
-                        <img src="images/store1.jpg" alt="KASH Features" class="w-full h-auto rounded-xl shadow-lg">
-                    </div>
-                    <div class="lg:w-1/2 animate__animated animate__fadeInRight">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Smart Search & Discovery</h2>
-                        <p class="text-gray-700 mb-4">Our intelligent search algorithm learns your preferences to surface products you'll love. Filter by price, distance, ratings, and more to find exactly what you need.</p>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>Personalized recommendations based on your shopping history</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>Advanced filters to narrow down your search</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>Save favorite items and suppliers for quick access</span>
-                            </li>
-                        </ul>
+            <!-- Trust Indicators / Stats -->
+            <section class="bg-emerald-50 py-16" aria-labelledby="stats-heading">
+                <div class="container mx-auto px-4">
+                    <h2 id="stats-heading" class="sr-only">Platform Statistics</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                            <div class="text-5xl font-bold text-emerald-600 mb-2">97%</div>
+                            <div class="text-gray-600 font-medium">Refund Guarantee</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                            <div class="text-5xl font-bold text-emerald-600 mb-2">1%</div>
+                            <div class="text-gray-600 font-medium">Lifetime Referral Bonus</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                            <div class="text-5xl font-bold text-emerald-600 mb-2">100%</div>
+                            <div class="text-gray-600 font-medium">Verified Suppliers</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                            <div class="text-5xl font-bold text-emerald-600 mb-2">24/7</div>
+                            <div class="text-gray-600 font-medium">Customer Support</div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="flex flex-col lg:flex-row-reverse gap-12 items-center mb-16">
-                    <div class="lg:w-1/2 animate__animated animate__fadeInRight">
-                        <img src="images/store1.jpg" alt="KASH Features" class="w-full h-auto rounded-xl shadow-lg">
-                    </div>
-                    <div class="lg:w-1/2 animate__animated animate__fadeInLeft">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Organised Refund System</h2>
-                        <p class="text-gray-700 mb-4">Since the vendor only recieves payment after the good has been supplied, you can request payment:</p>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>If the delivery time is exceeded.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>If the good is not delivered at all.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>If the good has been tampered with.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col lg:flex-row gap-12 items-center">
-                    <div class="lg:w-1/2 animate__animated animate__fadeInLeft">
-                        <img src="images/store1.jpg" alt="KASH Features" class="w-full h-auto rounded-xl shadow-lg">
-                    </div>
-                    <div class="lg:w-1/2 animate__animated animate__fadeInRight">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Secure Payment Options</h2>
-                        <p class="text-gray-700 mb-4">Choose from multiple payment methods that suit your needs. All transactions are protected with industry-leading security measures.</p>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>Mobile money, credit/debit cards, and bank transfers</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>Split payments and installment options available</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="uil uil-check-circle text-emerald-500 mt-1 mr-2"></i>
-                                <span>Payment history and receipts stored in your account</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </section>
 
-            <!-- CTA Section 2 -->
-            <div class="bg-emerald-50 rounded-xl p-8 mb-20 text-center animate__animated animate__fadeIn">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Join Our Growing Community</h2>
-                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Become part of the KASH family today and enjoy exclusive benefits, early access to new features, and special promotions.</p>
-                <button class="cta-button mx-auto bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center justify-center">
-                        <i class="uil uil-user-plus mr-2"></i> Sign Up Now
-                    </a>
-                </button>
-            </div>
+            <!-- Key Features Section -->
+            <section id="features" class="py-20 bg-white" aria-labelledby="features-heading">
+                <div class="container mx-auto px-4">
+                    <h2 id="features-heading" class="text-4xl font-bold text-center mb-4 text-gray-800">
+                        Why Choose KASH for Online Shopping?
+                    </h2>
+                    <p class="text-center text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+                        Experience secure, convenient shopping with features designed to protect buyers and empower sellers
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Feature 1 -->
+                        <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                            <div class="text-emerald-500 text-5xl mb-4">
+                                <i class="uil uil-shield-check"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">97% Refund Protection</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Shop with confidence knowing you're protected. Get 97% refund if goods aren't delivered, delivery exceeds promised time, or items are tampered with. Your money stays secure until delivery confirmation.
+                            </p>
+                        </article>
+
+                        <!-- Feature 2 -->
+                        <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                            <div class="text-emerald-500 text-5xl mb-4">
+                                <i class="uil uil-users-alt"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Lifetime Referral Earnings</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Earn 1% commission on every transaction your referrals make—forever. Whether they buy, sell, or resell, you earn passive income for life. Build your network and watch your earnings grow.
+                            </p>
+                        </article>
+
+                        <!-- Feature 3 -->
+                        <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                            <div class="text-emerald-500 text-5xl mb-4">
+                                <i class="uil uil-check-circle"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">100% Verified Suppliers</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Every seller undergoes rigorous verification including background checks, business validation, and quality assessments. Shop from trusted, legitimate businesses only.
+                            </p>
+                        </article>
+
+                        <!-- Feature 4 -->
+                        <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                            <div class="text-emerald-500 text-5xl mb-4">
+                                <i class="uil uil-bolt"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Fast & Secure Delivery</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Track your orders in real-time from pickup to delivery. Our optimized logistics network ensures quick delivery with package safety guaranteed at every step.
+                            </p>
+                        </article>
+
+                        <!-- Feature 5 -->
+                        <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                            <div class="text-emerald-500 text-5xl mb-4">
+                                <i class="uil uil-store"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Seller Visibility Tools</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Boost your business with built-in marketing tools, inventory management, sales analytics, and customer insights. Reach more buyers and grow your revenue.
+                            </p>
+                        </article>
+
+                        <!-- Feature 6 -->
+                        <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                            <div class="text-emerald-500 text-5xl mb-4">
+                                <i class="uil uil-repeat"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Easy Reselling Platform</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Turn products into profit. Buy from suppliers at wholesale prices and resell with your markup. Perfect for entrepreneurs starting their e-commerce journey.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section id="how-it-works" class="py-20 bg-gradient-to-br from-emerald-50 to-green-50" aria-labelledby="how-it-works-heading">
+                <div class="container mx-auto px-4">
+                    <h2 id="how-it-works-heading" class="text-4xl font-bold text-center mb-4 text-gray-800">
+                        How KASH Works
+                    </h2>
+                    <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg">
+                        Start shopping, selling, or reselling in minutes with our simple process
+                    </p>
+                    
+                    <div class="max-w-4xl mx-auto">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col md:flex-row gap-6 items-center mb-12">
+                            <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                                1
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Download & Create Account</h3>
+                                <p class="text-gray-600 text-lg">
+                                    Download the KASH app, sign up in seconds, and verify your account. Choose whether you want to buy, sell, or both.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex flex-col md:flex-row gap-6 items-center mb-12">
+                            <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                                2
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Browse or List Products</h3>
+                                <p class="text-gray-600 text-lg">
+                                    Buyers: Search thousands of products from verified suppliers. Sellers: List your inventory with photos, descriptions, and pricing.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex flex-col md:flex-row gap-6 items-center mb-12">
+                            <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                                3
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Secure Payment & Protection</h3>
+                                <p class="text-gray-600 text-lg">
+                                    Make secure payments through KASH. Your money is held in escrow until delivery is confirmed, protecting both buyers and sellers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                                4
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-semibold mb-2 text-gray-800">Track, Receive & Earn</h3>
+                                <p class="text-gray-600 text-lg">
+                                    Track deliveries in real-time. Confirm receipt to release payment. Refer friends and earn 1% lifetime commission on their transactions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- About Section -->
-            <h1 class="text-3xl font-bold text-center mb-12 text-gray-800 animate__animated animate__fadeIn">ABOUT KASH</h1>
-            <div class="about_page flex flex-col lg:flex-row gap-8 mb-20 animate__animated animate__fadeIn" id="about">
-                <div class="about_logo lg:w-1/2">
-                    <img src="images/store1.jpg" alt="KASH Store" class="w-full h-auto rounded-xl shadow-lg animate__animated animate__fadeInLeft">
-                </div>
-                <div class="about_text lg:w-1/2 animate__animated animate__fadeInRight">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Story</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Founded in 2025, KASH was born out of a simple idea: to make shopping more convenient, reliable, and enjoyable for everyone. Our founders recognized the challenges customers faced in finding trustworthy suppliers and getting quality products delivered on time.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Today, KASH has grown into a leading platform connecting thousands of customers with verified suppliers across multiple categories. We're proud to support local businesses while providing customers with an exceptional shopping experience.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Our mission is to bridge the gap between customers and suppliers through technology, creating a seamless ecosystem that benefits everyone involved. We're constantly innovating to bring you new features and services that make shopping easier than ever.
-                    </p>
-                    <button class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="" class="flex items-center">
-                            <i class="uil uil-book-open mr-2"></i> Read Our Full Story
-                        </a>
-                    </button>
-                </div>
-            </div>
-
-            <div class="about_app bg-gradient-to-r from-emerald-500 to-emerald-600 p-8 rounded-xl text-center mb-20 animate__animated animate__fadeIn">
-                <p class="text-xl md:text-2xl font-medium text-white mb-6">KASH is your one-stop solution for all your shopping needs</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button class="cta-button bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center justify-center">
-                            <i class="uil uil-apple mr-2"></i> Download on iOS
-                        </a>
-                    </button>
-                    <button class="cta-button bg-emerald-800 hover:bg-emerald-900 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center justify-center">
-                            <i class="uil uil-google-play mr-2"></i> Get it on Android
-                        </a>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Testimonials Section -->
-            <div class="mb-20 animate__animated animate__fadeIn">
-                <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">WHAT OUR CUSTOMERS SAY</h1>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold mr-4">JD</div>
-                            <div>
-                                <h4 class="font-semibold">Ashley</h4>
-                                <div class="flex text-yellow-400">
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
+            <section id="about" class="py-20 bg-white" aria-labelledby="about-heading">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="lg:w-1/2">
+                            <img src="images/store1.jpg" 
+                                 alt="KASH mobile app interface showing product listings and secure checkout" 
+                                 class="w-full h-auto rounded-xl shadow-2xl"
+                                 loading="lazy">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2 id="about-heading" class="text-4xl font-bold mb-6 text-gray-800">
+                                About KASH E-commerce Platform
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-lg">
+                                KASH is revolutionizing online shopping in Cameroon by creating a secure, transparent marketplace where buyers, sellers, and resellers thrive together.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-lg">
+                                Founded in 2025, we recognized the need for a trusted platform that protects customers with our industry-leading 97% refund guarantee while empowering sellers with visibility tools and resellers with income opportunities.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                Our mission is simple: make online commerce accessible, secure, and profitable for everyone. Whether you're shopping from home, growing your business, or earning through referrals, KASH provides the tools and protection you need to succeed.
+                            </p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start gap-3">
+                                    <i class="uil uil-check-circle text-emerald-500 text-2xl mt-1"></i>
+                                    <div>
+                                        <strong class="text-gray-800">For Buyers:</strong>
+                                        <span class="text-gray-600"> Shop securely with 97% refund protection and verified suppliers</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="uil uil-check-circle text-emerald-500 text-2xl mt-1"></i>
+                                    <div>
+                                        <strong class="text-gray-800">For Sellers:</strong>
+                                        <span class="text-gray-600"> Increase visibility, manage inventory, and reach more customers</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="uil uil-check-circle text-emerald-500 text-2xl mt-1"></i>
+                                    <div>
+                                        <strong class="text-gray-800">For Resellers:</strong>
+                                        <span class="text-gray-600"> Source products and earn with built-in dropshipping support</span>
+                                    </div>
                                 </div>
                             </div>
+                            
+                            <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" 
+                               class="btn-primary text-white px-8 py-3 rounded-lg inline-flex items-center shadow-lg"
+                               download
+                                rel="nofollow">
+                                <i class="uil uil-download-alt mr-2"></i> Start Your Journey Today
+                            </a>
                         </div>
-                        <p class="text-gray-600">"KASH will completely transform how I shop. I can't wait to do all my local shoping just from my mobile screen!"</p>
                     </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-4xl font-bold mb-6">
+                        Join Thousands of Satisfied Users on KASH
+                    </h2>
+                    <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Whether you want to shop securely, grow your business, or earn passive income through referrals—KASH has everything you need. Download now and get started in minutes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" 
+                           class="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center shadow-xl transition"
+                           download
+                            rel="nofollow">
+                            <i class="uil uil-mobile-android mr-2 text-xl"></i> Download Free App
+                        </a>
+                        <a href="#contact" 
+                           class="bg-emerald-800 hover:bg-emerald-900 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center shadow-xl transition">
+                            <i class="uil uil-envelope mr-2 text-xl"></i> Contact Sales Team
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="py-20 bg-white" aria-labelledby="faq-heading">
+                <div class="container mx-auto px-4 max-w-4xl">
+                    <h2 id="faq-heading" class="text-4xl font-bold text-center mb-4 text-gray-800">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-center text-gray-600 mb-16 text-lg">
+                        Find answers to common questions about KASH's features, refund policy, and how to get started
+                    </p>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold mr-4">AS</div>
-                            <div>
-                                <h4 class="font-semibold">Amina S.</h4>
-                                <div class="flex text-yellow-400">
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                </div>
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item border border-gray-200 rounded-lg hover:border-emerald-500 transition">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
+                                    aria-expanded="false">
+                                <h3 class="font-semibold text-lg text-gray-800 pr-8">
+                                    How does the 97% refund guarantee work?
+                                </h3>
+                                <i class="uil uil-plus text-2xl text-emerald-600 flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Your payment is held in secure escrow until you confirm delivery. You're eligible for a 97% refund if: (1) the item isn't delivered at all, (2) delivery time exceeds the promised timeframe, or (3) the product has been tampered with or doesn't match the description. Simply request a refund through the app within the specified timeframe, and we'll process it immediately after verification.
+                                </p>
                             </div>
                         </div>
-                        <p class="text-gray-600">"As a busy professional, I believe KASH will saves me so much time. The customer support is fantastic, and I love the refund method.
-                             This way, scams will be easily avoided and shop owners will be forced to ensure the quality of what they deliver. Highly recommend to anyone who values convenience."</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold mr-4">MK</div>
-                            <div>
-                                <h4 class="font-semibold">Michael K.</h4>
-                                <div class="flex text-yellow-400">
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star"></i>
-                                    <i class="uis uis-star-half-alt"></i>
-                                </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item border border-gray-200 rounded-lg hover:border-emerald-500 transition">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
+                                    aria-expanded="false">
+                                <h3 class="font-semibold text-lg text-gray-800 pr-8">
+                                    How do I earn the 1% lifetime referral bonus?
+                                </h3>
+                                <i class="uil uil-plus text-2xl text-emerald-600 flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Share your unique referral code with friends and family. When they sign up and complete transactions (buying, selling, or reselling), you earn 1% commission on every transaction they make—forever. There's no cap on earnings, and you can track your referral income in real-time through your dashboard. The more people you refer, the more passive income you generate.
+                                </p>
                             </div>
                         </div>
-                        <p class="text-gray-600">"The variety of suppliers on KASH is impressive. I've discovered so many local businesses I didn't know about before. The return process is also very straightforward when needed."</p>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-8">
-                    <button class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="" class="flex items-center justify-center">
-                            <i class="uil uil-comment-alt-heart mr-2"></i> View More Reviews
-                        </a>
-                    </button>
-                </div>
-            </div>
 
-            <!-- Why Choose Section -->
-            <h1 class="text-3xl font-bold text-center mb-12 text-gray-800 animate__animated animate__fadeIn">WHY CHOOSE KASH</h1>
-            <div class="why_choose_kash flex flex-col lg:flex-row gap-8 mb-20 animate__animated animate__fadeIn">
-                <div class="choose_image lg:w-1/2">
-                    <img src="/images/store1.jpg" alt="Why Choose KASH" class="w-full h-auto rounded-xl shadow-lg animate__animated animate__fadeInLeft">
-                </div>
-
-                <div class="why_choose_kash_carts lg:w-1/2 space-y-4 animate__animated animate__fadeInRight">
-                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <div class="bg-emerald-500 text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3 class="font-semibold text-lg">FAST SUPPLIES</h3>
-                            <p class="text-gray-600">With our strategically located fulfillment centers and optimized delivery routes, KASH ensures you receive your products faster than traditional shopping methods. Our average delivery time is under 24 hours for urban areas.</p>
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item border border-gray-200 rounded-lg hover:border-emerald-500 transition">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
+                                    aria-expanded="false">
+                                <h3 class="font-semibold text-lg text-gray-800 pr-8">
+                                    What makes KASH suppliers "verified"?
+                                </h3>
+                                <i class="uil uil-plus text-2xl text-emerald-600 flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Every supplier on KASH goes through our comprehensive 5-step verification process: (1) Business registration and legal documentation review, (2) Physical store or warehouse inspection, (3) Product quality sampling and testing, (4) Background checks on business owners, and (5) Ongoing performance monitoring based on customer reviews and delivery metrics. Only businesses that meet our strict standards can sell on KASH.
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <div class="bg-emerald-500 text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3 class="font-semibold text-lg">VERIFIED SERVICE PROVIDERS</h3>
-                            <p class="text-gray-600">We conduct thorough background checks, quality assessments, and customer satisfaction reviews before onboarding any supplier. Our verification process includes physical store visits and sample product testing.</p>
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item border border-gray-200 rounded-lg hover:border-emerald-500 transition">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
+                                    aria-expanded="false">
+                                <h3 class="font-semibold text-lg text-gray-800 pr-8">
+                                    Can I both buy and sell on KASH?
+                                </h3>
+                                <i class="uil uil-plus text-2xl text-emerald-600 flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Absolutely! KASH supports all three roles: buyer, seller, and reseller. You can purchase products for personal use while also listing your own inventory for sale. Many users buy from wholesale suppliers at discounted rates and resell at their preferred markup. Your single account gives you access to all features, making it easy to manage different activities from one dashboard.
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <div class="bg-emerald-500 text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3 class="font-semibold text-lg">CONVENIENCE AND SPEED</h3>
-                            <p class="text-gray-600">Our intuitive platform allows you to complete purchases in just a few taps. Save your preferences, payment methods, and delivery addresses for even faster checkout on future orders.</p>
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item border border-gray-200 rounded-lg hover:border-emerald-500 transition">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
+                                    aria-expanded="false">
+                                <h3 class="font-semibold text-lg text-gray-800 pr-8">
+                                    How long does delivery take?
+                                </h3>
+                                <i class="uil uil-plus text-2xl text-emerald-600 flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Delivery times vary by location and supplier. Most urban areas receive orders within 24-72 hours. You'll see the estimated delivery time before checkout, and you can track your package in real-time through the app. If delivery exceeds the promised timeframe, you're eligible for our 97% refund guarantee. Express delivery options are available for urgent orders.
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <div class="bg-emerald-500 text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3 class="font-semibold text-lg">SECURE PAYMENTS</h3>
-                            <p class="text-gray-600">Your financial information is protected with industry-standard encryption. We never store your full payment details on our servers, and all transactions are monitored for suspicious activity.</p>
-                        </div>
-                    </div>
-
-                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <div class="bg-emerald-500 text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3 class="font-semibold text-lg">CUSTOMER SUPPORT</h3>
-                            <p class="text-gray-600">Our support team is available 24/7 through multiple channels including live chat, email, and phone. Average response time is under 15 minutes for priority issues.</p>
-                        </div>
-                    </div>
-
-                    <div class="choose_carts flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <div class="bg-emerald-500 text-white p-2 rounded-full mt-1"><i class="uil uil-check"></i></div>
-                        <div>
-                            <h3 class="font-semibold text-lg">SHOP AND PURCHASE INVENTORY</h3>
-                            <p class="text-gray-600">We help you keep track of all the goods you sold or bought. you can also generate data about this to keep trach of your shops progress or spending habit. </p>
+                        <!-- FAQ Item 6 -->
+                        <div class="faq-item border border-gray-200 rounded-lg hover:border-emerald-500 transition">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
+                                    aria-expanded="false">
+                                <h3 class="font-semibold text-lg text-gray-800 pr-8">
+                                    What payment methods does KASH accept?
+                                </h3>
+                                <i class="uil uil-plus text-2xl text-emerald-600 flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    We accept multiple secure payment methods including mobile money (MTN, Orange Money), bank transfers, debit/credit cards (Visa, Mastercard), and our in-app KASH Wallet. All transactions are encrypted with bank-level security, and your payment information is never stored on our servers. Choose the method that works best for you at checkout.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- CTA Section 3 -->
-            <div class="bg-emerald-800 text-white rounded-xl p-8 mb-20 text-center animate__animated animate__fadeIn">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Special Offer for New Customers!</h2>
-                <p class="text-lg mb-6 max-w-2xl mx-auto">Sign up today and get 20% off your first order with free delivery. Limited time offer!</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button class="cta-button bg-white text-emerald-800 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="https://expo.dev/artifacts/eas/63hZmZuWRgUmra7E1NoXZG.apk" class="flex items-center justify-center">
-                            <i class="uil uil-user-plus mr-2"></i> Create Account
-                        </a>
-                    </button>
-                    <button class="cta-button bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="" class="flex items-center justify-center">
-                            <i class="uil uil-percentage mr-2"></i> Learn About Offers
-                        </a>
-                    </button>
-                </div>
-            </div>
-
-            <!-- FAQs Section -->
-            <div class="faqs mb-20 animate__animated animate__fadeIn" id="faqss">
-                <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h1>
-                
-                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition-all duration-300 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <h5 class="font-medium text-lg">How do I place an order on KASH?</h5>
-                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
-                    </div>
-                    <p class="faqs_answer mt-2 text-gray-600 hidden">Ordering on KASH is simple! First, download our app from the App Store or Google Play. Browse through our categories or use the search function to find what you need. Add items to your cart, then proceed to checkout where you'll select your payment method and delivery address. Confirm your order, and you'll receive updates every step of the way until delivery.</p>
-                </div>
-
-                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition-all duration-300 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <h5 class="font-medium text-lg">What payment methods do you accept?</h5>
-                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
-                    </div>
-                    <p class="faqs_answer mt-2 text-gray-600 hidden">We accept a wide range of payment options for your convenience: Mobile money (MTN, Orange, etc.), Credit/Debit cards (Visa, Mastercard), Bank transfers, and KASH Wallet (our in-app payment system that lets you store funds for faster checkout). All payments are processed securely with encryption to protect your financial information.</p>
-                </div>
-
-                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition-all duration-300 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <h5 class="font-medium text-lg">How long does delivery take?</h5>
-                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
-                    </div>
-                    <p class="faqs_answer mt-2 text-gray-600 hidden">Delivery times vary depending on your location and the supplier's location. In urban areas, most orders arrive within 1-3 hours for express delivery or within 24 hours for standard delivery. For rural areas, delivery typically takes 2-3 business days. You'll see estimated delivery times during checkout and can track your order in real-time through the app.</p>
-                </div>
-
-                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition-all duration-300 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <h5 class="font-medium text-lg">Can I return a product if I'm not satisfied?</h5>
-                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
-                    </div>
-                    <p class="faqs_answer mt-2 text-gray-600 hidden">Yes! We offer a 7-day return policy for most products. If you're not completely satisfied with your purchase, you can initiate a return through the app within 7 days of delivery. The item must be in its original condition with all packaging intact. Some items like perishable goods or personalized products may not be eligible for return. Our customer support team can guide you through the return process if needed.</p>
-                </div>
-
-                <div class="questions_and_answers border border-gray-200 rounded-lg p-4 mb-3 hover:border-emerald-500 transition-all duration-300 cursor-pointer">
-                                       <div class="flex justify-between items-center">
-                        <h5 class="font-medium text-lg">How do I contact customer support?</h5>
-                        <span class="faqsIcon text-xl"><i class="uil uil-plus"></i></span>
-                    </div>
-                    <p class="faqs_answer mt-2 text-gray-600 hidden">Our customer support team is available 24/7 to assist you. You can reach us through: Live chat in the KASH app (fastest response), Email at support@kash.com, Phone at +237 676411380, or through our social media channels (@KASHSupport). For order-specific issues, please have your order number ready for faster resolution.</p>
-                </div>
-
-                <div class="text-center mt-8">
-                    <button class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <a href="" class="flex items-center justify-center">
-                            <i class="uil uil-question-circle mr-2"></i> More Questions?
-                        </a>
-                    </button>
-                </div>
-            </div>
+            </section>
 
             <!-- Contact Section -->
-            <div class="contact mb-20 animate__animated animate__fadeIn" id="contact">
-                <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">CONTACT US</h1>
-                
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-md animate__animated animate__fadeInLeft">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h2>
-                        <form class="space-y-4">
-                            <div>
-                                <label for="name" class="block text-gray-700 mb-2">Full Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Your name">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="your@email.com">
-                            </div>
-                            <div>
-                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
-                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Subject">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-gray-700 mb-2">Message</label>
-                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Your message"></textarea>
-                            </div>
-                            <button type="submit" class="cta-button w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
+            <section id="contact" class="py-20 bg-emerald-50" aria-labelledby="contact-heading">
+                <div class="container mx-auto px-4">
+                    <h2 id="contact-heading" class="text-4xl font-bold text-center mb-4 text-gray-800">
+                        Get In Touch With KASH
+                    </h2>
+                    <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg">
+                        Have questions? Our support team is available 24/7 to help you with orders, account setup, or technical issues
+                    </p>
                     
-                    <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-md animate__animated animate__fadeInRight">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="text-emerald-500 text-xl mr-4 mt-1"><i class="uil uil-map-marker"></i></div>
+                    <div class="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+                        <!-- Contact Form -->
+                        <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-md">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+                            <form class="space-y-4" aria-label="Contact form">
                                 <div>
-                                    <h4 class="font-semibold text-gray-800">Address</h4>
-                                    <p class="text-gray-600">CCAST street<br>Bambili, Bamenda</p>
+                                    <label for="contact-name" class="block text-gray-700 mb-2 font-medium">Full Name *</label>
+                                    <input type="text" 
+                                           id="contact-name" 
+                                           name="name"
+                                           required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" 
+                                           placeholder="Your full name">
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="text-emerald-500 text-xl mr-4 mt-1"><i class="uil uil-envelope"></i></div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-800">Email</h4>
-                                    <p class="text-gray-600">support@kash.com<br>info@kash.com</p>
+                                    <label for="contact-email" class="block text-gray-700 mb-2 font-medium">Email Address *</label>
+                                    <input type="email" 
+                                           id="contact-email" 
+                                           name="email"
+                                           required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" 
+                                           placeholder="your@email.com">
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="text-emerald-500 text-xl mr-4 mt-1"><i class="uil uil-phone"></i></div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-800">Phone</h4>
-                                    <p class="text-gray-600">+237 676 411 380<br>+237 677 482 442</p>
+                                    <label for="contact-phone" class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                                    <input type="tel" 
+                                           id="contact-phone" 
+                                           name="phone"
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" 
+                                           placeholder="+237 XXX XXX XXX">
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="text-emerald-500 text-xl mr-4 mt-1"><i class="uil uil-clock"></i></div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-800">Working Hours</h4>
-                                    <p class="text-gray-600">Monday - Friday: 8:00 - 20:00<br>Saturday - Sunday: 9:00 - 18:00</p>
+                                    <label for="contact-subject" class="block text-gray-700 mb-2 font-medium">Subject *</label>
+                                    <select id="contact-subject" 
+                                            name="subject"
+                                            required
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                        <option value="">Select a topic</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="buyer">Buyer Support</option>
+                                        <option value="seller">Seller Support</option>
+                                        <option value="refund">Refund Request</option>
+                                        <option value="technical">Technical Issue</option>
+                                        <option value="partnership">Business Partnership</option>
+                                    </select>
                                 </div>
-                            </div>
+                                <div>
+                                    <label for="contact-message" class="block text-gray-700 mb-2 font-medium">Message *</label>
+                                    <textarea id="contact-message" 
+                                              name="message"
+                                              required
+                                              rows="5" 
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" 
+                                              placeholder="Tell us how we can help you..."></textarea>
+                                </div>
+                                <button type="submit" 
+                                        class="btn-primary w-full text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
+                                    <i class="uil uil-message mr-2"></i> Send Message
+                                </button>
+                            </form>
                         </div>
                         
-                        <div class="mt-8">
-                            <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-gray-600 hover:text-emerald-500 text-2xl transition"><i class="uil uil-facebook-f"></i></a>
-                                <a href="#" class="text-gray-600 hover:text-emerald-500 text-2xl transition"><i class="uil uil-twitter"></i></a>
-                                <a href="#" class="text-gray-600 hover:text-emerald-500 text-2xl transition"><i class="uil uil-instagram"></i></a>
-                                <a href="#" class="text-gray-600 hover:text-emerald-500 text-2xl transition"><i class="uil uil-linkedin"></i></a>
-                                <a href="#" class="text-gray-600 hover:text-emerald-500 text-2xl transition"><i class="uil uil-youtube"></i></a>
+                        <!-- Contact Information -->
+                        <div class="lg:w-1/2 space-y-6">
+                            <div class="bg-white p-8 rounded-xl shadow-md">
+                                <h3 class="text-2xl font-bold mb-6 text-gray-800">Contact Information</h3>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-emerald-500 text-2xl mt-1">
+                                            <i class="uil uil-map-marker"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 mb-1">Office Address</h4>
+                                            <address class="text-gray-600 not-italic">
+                                                CCAST Street, Bambili<br>
+                                                Bamenda, Northwest Region<br>
+                                                Cameroon
+                                            </address>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-emerald-500 text-2xl mt-1">
+                                            <i class="uil uil-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 mb-1">Email Us</h4>
+                                            <a href="mailto:support@digetech.org" class="text-emerald-600 hover:underline block">support@digetech.org</a>
+                                            <a href="mailto:info@digetech.org" class="text-emerald-600 hover:underline block">info@digetech.org</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-emerald-500 text-2xl mt-1">
+                                            <i class="uil uil-phone"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 mb-1">Call Us</h4>
+                                            <a href="tel:+237676411380" class="text-emerald-600 hover:underline block">+237 676 411 380</a>
+                                            <a href="tel:+237677482442" class="text-emerald-600 hover:underline block">+237 677 482 442</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-emerald-500 text-2xl mt-1">
+                                            <i class="uil uil-clock"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 mb-1">Support Hours</h4>
+                                            <p class="text-gray-600">24/7 Customer Support</p>
+                                            <p class="text-gray-600 text-sm mt-1">We're always here to help</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Media -->
+                            <div class="bg-white p-8 rounded-xl shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-4">Follow Us on Social Media</h4>
+                                <div class="flex gap-4">
+                                    <a href="https://facebook.com/KASHShopping" 
+                                       class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-emerald-600 hover:text-white transition text-xl"
+                                       aria-label="Follow KASH on Facebook"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="uil uil-facebook-f"></i>
+                                    </a>
+                                    <a href="https://twitter.com/KASHSupport" 
+                                       class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-emerald-600 hover:text-white transition text-xl"
+                                       aria-label="Follow KASH on Twitter"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="uil uil-twitter"></i>
+                                    </a>
+                                    <a href="https://instagram.com/KASHOfficial" 
+                                       class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-emerald-600 hover:text-white transition text-xl"
+                                       aria-label="Follow KASH on Instagram"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="uil uil-instagram"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/company/kash" 
+                                       class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center hover:bg-emerald-600 hover:text-white transition text-xl"
+                                       aria-label="Follow KASH on LinkedIn"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="uil uil-linkedin"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Newsletter Section -->
-            <div class="bg-emerald-50 rounded-xl p-8 mb-20 text-center animate__animated animate__fadeIn">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Stay Updated with KASH</h2>
-                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, new features, and shopping tips delivered straight to your inbox.</p>
-                <form class="flex flex-col sm:flex-row justify-center gap-2 max-w-xl mx-auto">
-                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
-                    <button type="submit" class="cta-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap">
-                        Subscribe Now
-                    </button>
-                </form>
-                <p class="text-sm text-gray-500 mt-3">We respect your privacy. Unsubscribe at any time.</p>
-            </div>
+            </section>
         </main>
 
         <!-- Footer -->
-        <footer class="footer text-white py-12 animate__animated animate__fadeIn">
+        <footer class="bg-emerald-900 text-white py-12">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                    <!-- Company Info -->
                     <div>
                         <h3 class="text-xl font-bold mb-4 flex items-center">
-                            <i class="uil uil-shopping-cart-alt mr-2"></i> KASH
+                            <img src="./images/icon.png" class="w-8 h-8 mr-2" alt="" width="32" height="32">
+                            KASH
                         </h3>
-                        <p class="text-emerald-200 mb-4">Your reliable shopping platform connecting you with verified suppliers for all your needs.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-emerald-200 hover:text-white text-xl transition"><i class="uil uil-facebook-f"></i></a>
-                            <a href="#" class="text-emerald-200 hover:text-white text-xl transition"><i class="uil uil-twitter"></i></a>
-                            <a href="#" class="text-emerald-200 hover:text-white text-xl transition"><i class="uil uil-instagram"></i></a>
-                            <a href="#" class="text-emerald-200 hover:text-white text-xl transition"><i class="uil uil-linkedin"></i></a>
+                        <p class="text-emerald-200 mb-4 leading-relaxed">
+                            Secure e-commerce platform for buying, selling, and reselling with 97% refund protection and lifetime referral earnings.
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="https://facebook.com/KASHShopping" class="text-emerald-200 hover:text-white transition text-xl" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="uil uil-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/KASHSupport" class="text-emerald-200 hover:text-white transition text-xl" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <i class="uil uil-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/KASHOfficial" class="text-emerald-200 hover:text-white transition text-xl" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com/company/kash" class="text-emerald-200 hover:text-white transition text-xl" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="uil uil-linkedin"></i>
+                            </a>
                         </div>
                     </div>
                     
+                    <!-- Quick Links -->
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                         <ul class="space-y-2">
-                            <li><a href="index.html" class="text-emerald-200 hover:text-white transition">Home</a></li>
-                            <li><a href="#about" class="text-emerald-200 hover:text-white transition">About Us</a></li>
+                            <li><a href="#home" class="text-emerald-200 hover:text-white transition">Home</a></li>
                             <li><a href="#features" class="text-emerald-200 hover:text-white transition">Features</a></li>
-                            <li><a href="#faqss" class="text-emerald-200 hover:text-white transition">FAQs</a></li>
+                            <li><a href="#how-it-works" class="text-emerald-200 hover:text-white transition">How It Works</a></li>
+                            <li><a href="#about" class="text-emerald-200 hover:text-white transition">About Us</a></li>
+                            <li><a href="#faq" class="text-emerald-200 hover:text-white transition">FAQ</a></li>
                             <li><a href="#contact" class="text-emerald-200 hover:text-white transition">Contact</a></li>
                         </ul>
                     </div>
                     
+                    <!-- For Users -->
                     <div>
-                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <h4 class="text-lg font-semibold mb-4">For Users</h4>
                         <ul class="space-y-2">
-                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Grocery Delivery</a></li>
-                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Electronics</a></li>
-                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Fashion & Apparel</a></li>
-                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Home & Kitchen</a></li>
-                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Health & Beauty</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Buy Products</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Sell Your Goods</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Reseller Program</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Referral Bonuses</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Track Orders</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Refund Policy</a></li>
                         </ul>
                     </div>
                     
+                    <!-- Legal & Support -->
                     <div>
-                        <h4 class="text-lg font-semibold mb-4">Support</h4>
+                        <h4 class="text-lg font-semibold mb-4">Legal & Support</h4>
                         <ul class="space-y-2">
                             <li><a href="#" class="text-emerald-200 hover:text-white transition">Help Center</a></li>
                             <li><a href="#" class="text-emerald-200 hover:text-white transition">Terms of Service</a></li>
                             <li><a href="#" class="text-emerald-200 hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Refund Policy</a></li>
                             <li><a href="#" class="text-emerald-200 hover:text-white transition">Shipping Policy</a></li>
+                            <li><a href="#" class="text-emerald-200 hover:text-white transition">Cookie Policy</a></li>
+                            <li><a href="sitemap.xml" class="text-emerald-200 hover:text-white transition">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="border-t border-emerald-700 mt-8 pt-8 text-center text-emerald-200">
-                    <p>&copy; <span id = "year"></span> KASH Shopping Platform. All rights reserved.</p>
+                <div class="border-t border-emerald-700 pt-8 text-center text-emerald-200">
+                    <p>&copy; <span id="currentYear"></span> KASH Shopping Platform. All rights reserved.</p>
+                    <p class="mt-2 text-sm">Made with ❤️ in Cameroon</p>
                 </div>
             </div>
         </footer>
-    </div>
 
-    <!-- Back to Top Button -->
-    <div class="fixed bottom-8 right-8 z-50 hidden" id="backToTop">
-        <button class="bg-emerald-500 hover:bg-emerald-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110">
-            <i class="uil uil-arrow-up text-xl"></i>
+        <!-- Back to Top Button -->
+        <button id="backToTop" 
+                class="fixed bottom-8 right-8 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-lg items-center justify-center transition transform hover:scale-110 hidden z-40"
+                aria-label="Back to top">
+            <i class="uil uil-arrow-up text-2xl"></i>
         </button>
     </div>
 
     <!-- JavaScript -->
     <script>
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-        // Loader animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const loaderContainer = document.querySelector('.loader-container');
-            const progressBarFill = document.querySelector('.progress-bar-fill');
-            const mainContent = document.querySelector('.main-content');
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            const mainContent = document.getElementById('mainContent');
+            const progressFill = document.querySelector('.progress-bar-fill');
             
-            // Simulate loading progress
+            // Simulate progress
             let progress = 0;
             const interval = setInterval(() => {
-                progress += Math.random() * 10;
+                progress += Math.random() * 15;
                 if (progress >= 100) {
                     progress = 100;
                     clearInterval(interval);
                     
-                    // Hide loader and show content
                     setTimeout(() => {
-                        loaderContainer.style.opacity = '0';
+                        loader.style.opacity = '0';
                         setTimeout(() => {
-                            loaderContainer.style.display = 'none';
-                            mainContent.classList.remove('hidden');
-                            
-                            // Add animations to elements
-                            document.querySelectorAll('.animate__animated').forEach(el => {
-                                const animation = el.classList.contains('animate__fadeInLeft') ? 'fadeInLeft' :
-                                                el.classList.contains('animate__fadeInRight') ? 'fadeInRight' :
-                                                el.classList.contains('animate__fadeInUp') ? 'fadeInUp' :
-                                                el.classList.contains('animate__fadeInDown') ? 'fadeInDown' : 'fadeIn';
-                                el.style.opacity = '1';
-                            });
+                            loader.style.display = 'none';
                         }, 500);
-                    }, 500);
+                    }, 300);
                 }
-                progressBarFill.style.width = `${progress}%`;
-            }, 200);
+                progressFill.style.width = progress + '%';
+            }, 150);
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
             
-            // Mobile menu toggle
-            const navIcon = document.querySelector('.navIcon');
-            const navMenu = document.getElementById('navMenu');
-            
-            navIcon.addEventListener('click', function() {
-                navMenu.classList.toggle('hidden');
+            // Toggle icon
+            const icon = this.querySelector('i');
+            icon.classList.toggle('uil-bars');
+            icon.classList.toggle('uil-times');
+        });
+        
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('uil-times');
+                icon.classList.add('uil-bars');
             });
-            
-            // FAQ toggle functionality
-            const faqItems = document.querySelectorAll('.questions_and_answers');
-            faqItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const answer = this.querySelector('.faqs_answer');
-                    const icon = this.querySelector('.faqsIcon i');
-                    
-                    // Toggle answer visibility
-                    answer.classList.toggle('hidden');
-                    
-                    // Toggle icon between plus and minus
-                    if (icon.classList.contains('uil-plus')) {
-                        icon.classList.remove('uil-plus');
-                        icon.classList.add('uil-minus');
-                    } else {
-                        icon.classList.remove('uil-minus');
-                        icon.classList.add('uil-plus');
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = this.querySelector('i');
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.querySelector('.faq-answer').classList.add('hidden');
+                        item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        item.querySelector('.faq-question i').classList.remove('uil-minus');
+                        item.querySelector('.faq-question i').classList.add('uil-plus');
                     }
                 });
+                
+                // Toggle current FAQ
+                answer.classList.toggle('hidden');
+                this.setAttribute('aria-expanded', !isExpanded);
+                icon.classList.toggle('uil-plus');
+                icon.classList.toggle('uil-minus');
             });
-            
-            // Back to top button
-            const backToTopButton = document.getElementById('backToTop');
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.remove('hidden');
-                } else {
-                    backToTopButton.classList.add('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth Scroll for Anchor Links   
+        // Form Submission (placeholder - replace with actual backend)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting KASH! We will respond within 24 hours.');
+            this.reset();
+        });
+        
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
-            
-            backToTopButton.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (!navMenu.classList.contains('hidden')) {
-                            navMenu.classList.add('hidden');
-                        }
-                    }
-                });
-            });
+        }, observerOptions);
+        
+        // Observe elements for fade-in animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
         });
     </script>
 </body>
