@@ -250,9 +250,22 @@
             background: #10b981;
             color: white;
             padding: 10px 20px;
-            border-radius: 5px;
         }
     </style>
+
+    <!-- App Deep Link Redirection -->
+    <script>
+        (function () {
+            var url = window.location.href.toLowerCase();
+            var appDownloadUrl = "https://play.google.com/store/apps/details?id=com.kash.marketplace";
+
+            // Redirect to app download if accessing a product or shop link
+            if (/\/product\/\d+/.test(url) || /\/shop\/\d+/.test(url) || /\/products?\//.test(url) || /[\?&]products?=/.test(url) ||
+                /\/shops?\//.test(url) || /[\?&]shops?=/.test(url)) {
+                window.location.replace(appDownloadUrl);
+            }
+        })();
+    </script>
 </head>
 
 <body class="antialiased">
