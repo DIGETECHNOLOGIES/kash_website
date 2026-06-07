@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASH</title>
+    <script>
+        function redirectUser() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.kash.marketplace";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/us/app/kash/id6761426654";
+            } else {
+                window.location.href = "https://kash.digetech.org";
+            }
+        }
+
+        window.onload = redirectUser;
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
